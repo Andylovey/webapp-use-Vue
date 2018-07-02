@@ -44,12 +44,12 @@ export default {
     getDataForCarousel() {
       this.$http
         .get(
-          "/api/Joke/NewstImg?key=223ff8937d0043e5a9eb95f2162f8f36&page=11&rows=2"
+          "/api/Joke/NewstImg?key=223ff8937d0043e5a9eb95f2162f8f36&page=1814&rows=2"
         )
         .then(res => {
           var dataObj = JSON.parse(res.bodyText);
           var result = dataObj.result;
-          // console.log(result);
+           console.log(result);
           this.resultArr.push(result);
           console.log(this.resultArr);
         });
