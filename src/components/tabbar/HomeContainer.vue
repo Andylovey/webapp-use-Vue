@@ -64,17 +64,6 @@ export default {
 <style lang="less" scoped>
 .mint-swipe {
   height: 200px;
-  .mint-swipe-item {
-    &:nth-child(1) {
-      // background: red;
-    }
-    &:nth-child(2) {
-      // background: blue;
-    }
-    &:nth-child(3) {
-      // background: green;
-    }
-  }
   img {
     width: 100%;
     height: 100%;
