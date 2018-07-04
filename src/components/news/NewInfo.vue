@@ -9,10 +9,14 @@
         <img :src="allNews.thumbnail_pic_s" alt="">
         <img :src="allNews.thumbnail_pic_s02" alt="">
         <img :src="allNews.thumbnail_pic_s03" alt="">
+
+        <comment></comment>
     </div>    
 </template>
 
 <script>
+import comment from '../subComponents/comment.vue'
+
 export default {
     data(){
         return {
@@ -39,6 +43,9 @@ export default {
                 console.log(this.allNews);
             })
         }
+    },
+    components : {
+        'comment' : comment
     }
 }
 </script>

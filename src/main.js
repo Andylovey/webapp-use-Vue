@@ -9,11 +9,12 @@ import VueResource from 'vue-resource'
 Vue.use(VueResource)
 
 //导入Mint-ui 组件
-import { Header , Swipe, SwipeItem } from 'mint-ui';
+import { Header , Swipe, SwipeItem , Button } from 'mint-ui';
 import 'mint-ui/lib/style.css'
 Vue.component(Header.name, Header);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
+Vue.component(Button.name, Button);
 
 //导入MUI 样式
 import './assets/libs/css/mui.min.css'
