@@ -43,6 +43,10 @@ export default {
   },
   methods: {
     getComments() {
+      Indicator.open({
+        text: "加载中...",
+        spinnerType: "fading-circle"
+      });
       this.$http
         .get(
           "/api/MingRenMingYan/LookUp?key=2780b20e3218411bb200c033374c5db6&keyword=%E5%A4%A9%E6%89%8D&page=" +
@@ -55,25 +59,15 @@ export default {
           // console.log(dataObj.result);
           this.allcmt = this.allcmt.concat(dataObj.result);
           console.log(this.allcmt);
+          Indicator.close();
+        },function(){
+          Toast('加载失败！网络出现异常');
+          Indicator.close();
         });
     },
     getMore() {
-      var allcmtLen = 10;
-
-      Indicator.open({
-        text: "加载中...",
-        spinnerType: "fading-circle"
-      });
       this.page++;
       this.getComments();
-      console.log(this.allcmt.length);
-      if (this.allcmt.length >= allcmtLen) {
-        setTimeout(function() {
-          Indicator.close();
-        }, 1000);
-      }
-      //     // Indicator.close();
-      //   }
     },
     postCmt() {
       Toast("暂时无法发表评论");
