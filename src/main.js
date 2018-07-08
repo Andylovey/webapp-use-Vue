@@ -1,9 +1,6 @@
 //导入 Vue 框架
 import Vue from 'vue'
 
-//导入 App 组件
-import app from './App.vue'
-
 //导入 Vue-resource
 import VueResource from 'vue-resource'
 Vue.use(VueResource)
@@ -31,6 +28,9 @@ import './assets/libs/css/icons-extra.css'
 
 //导入路由模块
 import router from './router/index.js'
+
+//导入 App 组件
+import app from './App.vue'
 
 var vm = new Vue({
   el : '#app',
