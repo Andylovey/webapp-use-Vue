@@ -26,7 +26,7 @@ import VuePreview from 'vue2-preview'
 Vue.use(VuePreview)
 
 //导入MUI 样式
-import './assets/libs/css/mui.min.css'
+import './assets/libs/css/mui.css'
 import './assets/libs/css/icons-extra.css'
 
 //导入路由模块
